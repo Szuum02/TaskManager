@@ -1,1 +1,2 @@
 # TaskManager
+This repository contains a first workshop in Java course with Coders-Lab. It is console program which has 4 options: add task, list tasks, remove task and exit. Firstly program load tasks from file and ask which option user choose. At the end of the program all active tasks will be saved in a file. All tasks must have description, date (in format yyyy-mm-dd) and importance. This project may be continous in the future worshops.
