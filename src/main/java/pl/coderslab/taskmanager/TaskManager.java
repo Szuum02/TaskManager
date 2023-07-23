@@ -160,19 +160,25 @@ public class TaskManager {
 
     public static void removeTask() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please select number to remove");
+        System.out.println("Please select number to remove (-1 exit)");
         boolean correctNumber = false;
         int deleteIdx = 0;
         while (!correctNumber) {
             if (!scanner.hasNextInt()) {
                 scanner.next();
-                System.out.println("Incorrect argument passed. Please give number greater or equal 0 and less than " + tasks.length);
+                System.out.println("Incorrect argument passed. Please give number greater or equal 0 and less than " + tasks.length + " (-1 exit)");
             }
             deleteIdx = scanner.nextInt();
+
+            if (deleteIdx == -1) {
+                System.out.println("Exit remove section");
+                return;
+            }
+
             correctNumber = deleteIdx >= 0 && deleteIdx < tasks.length;
 
             if (!correctNumber) {
-                System.out.println("Incorrect argument passed. Please give number greater or equal 0 and less than " + tasks.length);
+                System.out.println("Incorrect argument passed. Please give number greater or equal 0 and less than " + tasks.length + " (-1 exit)");
             }
         }
         tasks = ArrayUtils.remove(tasks, deleteIdx);

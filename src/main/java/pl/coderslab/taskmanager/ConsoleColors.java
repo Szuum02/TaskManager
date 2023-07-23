@@ -1,4 +1,4 @@
-package pl.coderslab.taskmanager;
+package pl.coderslab;
 
 
 /**
